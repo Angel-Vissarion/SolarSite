@@ -89,6 +89,7 @@ nav a:hover {
     align-items: center;
     padding: 0 8%;
 }
+
 .hero-text {
     max-width: 650px;
     color: white;
@@ -181,6 +182,44 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+/* Battery Section */
+.battery-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.battery-image {
+    flex: 1;
+    min-width: 260px;
+    text-align: center;
+}
+
+.battery-image img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+}
+
+.battery-text {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+
+.battery-text ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.battery-text li {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
 /* Contact */
 .contact-info {
     margin-top: 25px;
@@ -215,6 +254,32 @@ footer {
     height: auto;
 }
 
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    transform: translateX(-60px);
+}
+
+.slide-in-right {
+    transform: translateX(60px);
+}
+
+.slide-in-left.visible,
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     body {
@@ -245,7 +310,8 @@ footer {
     }
 
     .service-boxes,
-    .project-boxes {
+    .project-boxes,
+    .battery-content {
         flex-direction: column;
     }
 
@@ -253,29 +319,12 @@ footer {
         width: 100%;
     }
 
-    /* Reveal Animations */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
+    .battery-text {
+        text-align: center;
+    }
 
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.slide-in-left {
-    transform: translateX(-60px);
-}
-
-.slide-in-right {
-    transform: translateX(60px);
-}
-
-.slide-in-left.visible,
-.slide-in-right.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
+    .battery-text ul {
+        text-align: left;
+        display: inline-block;
+    }
 }
