@@ -252,4 +252,30 @@ footer {
     .box {
         width: 100%;
     }
+
+    /* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    transform: translateX(-60px);
+}
+
+.slide-in-right {
+    transform: translateX(60px);
+}
+
+.slide-in-left.visible,
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
 }
