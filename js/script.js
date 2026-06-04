@@ -1,11 +1,10 @@
-
-
 function initScrollReveal() {
     const heroText = document.querySelector('.hero-text');
+
     const revealElements = [
         heroText,
         ...document.querySelectorAll(
-            '.services h2, .service-boxes .box, .projects h2, .project-boxes .box, .about h2, .about p, .contact h2, .contact p'
+            '.services h2, .service-boxes .box, .service-detail h2, .service-detail p, .projects h2, .project-boxes .box, .about h2, .about p, .contact h2, .contact p'
         )
     ].filter(Boolean);
 
@@ -25,8 +24,7 @@ function initScrollReveal() {
             }
         });
     }, {
-        threshold: 0.2,
-        rootMargin: '0px 0px -100px 0px'
+        threshold: 0.15
     });
 
     revealElements.forEach(el => observer.observe(el));
