@@ -339,7 +339,53 @@ footer {
         display: inline-block;
     }
 
+/* Impact Section */
 
+.impact-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 8%;
+    background-color: #f4f7f9;
+    flex-wrap: wrap;
+}
+
+.impact-image {
+    flex: 1;
+    min-width: 350px;
+}
+
+.impact-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.impact-content {
+    flex: 1;
+    min-width: 320px;
+}
+
+.impact-box {
+    margin-bottom: 40px;
+}
+
+.impact-box h2 {
+    font-size: 70px;
+    color: #f5b700;
+    line-height: 1;
+}
+
+.impact-box h3 {
+    color: #0b1f33;
+    margin: 10px 0;
+    font-size: 28px;
+}
+
+.impact-box p {
+    font-size: 18px;
+    color: #555;
+}
 
 
 }
