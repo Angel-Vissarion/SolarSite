@@ -22,3 +22,31 @@ const elements = document.querySelectorAll(
 }
 
 window.addEventListener('DOMContentLoaded', initScrollReveal);
+
+const aboutImages = [
+    "IMAGES/People.png",
+    "IMAGES/Battery.png",
+    "IMAGES/panlesview.png"
+];
+
+let currentAboutImage = 0;
+
+setInterval(() => {
+    const image = document.querySelector(".about-main-img");
+
+    if (!image) return;
+
+    image.style.opacity = "0";
+
+    setTimeout(() => {
+        currentAboutImage++;
+
+        if (currentAboutImage >= aboutImages.length) {
+            currentAboutImage = 0;
+        }
+
+        image.src = aboutImages[currentAboutImage];
+        image.style.opacity = "1";
+    }, 1200);
+
+}, 4000);
