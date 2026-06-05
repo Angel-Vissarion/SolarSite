@@ -165,23 +165,24 @@ nav a:hover {
 .service-boxes,
 .project-boxes {
     display: flex;
-    gap: 25px;
+    gap: 30px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .box {
-    background-color: white;
-    width: 320px;
-    height: 320px;
+    background-color: rgb(244, 247, 249);
+    width: 400px;
+    height: 250px;
 
-    padding: 30px;
+    padding: 15px;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 
-    text-align: center;
+    text-align: left;
 
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
