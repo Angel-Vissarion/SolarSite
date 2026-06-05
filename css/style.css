@@ -261,6 +261,13 @@ nav a:hover {
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
+/* Ensure collage images sit above the green background */
+.about-collage img,
+.about-collage .about-img {
+    position: relative;
+    z-index: 3;
+}
+
 .about-content {
     flex: 1;
 }
@@ -387,72 +394,88 @@ footer {
     opacity: 1;
     transform: translateX(0);
 }
+/* Responsive (rules below) */
+/* Modern About */
 
-/* Responsive */
+.about-collage {
+    flex: 1;
+    position: relative;
+    min-height: 620px;
+}
+
+.green-bg {
+    position: absolute;
+    background-color: #3aaa35;
+    z-index: 1;
+}
+
+.green-one {
+    width: 55%;
+    height: 45%;
+    left: 90px;
+    top: 190px;
+}
+
+.green-two {
+    width: 65%;
+    height: 40%;
+    left: 160px;
+    bottom: 20px;
+}
+
+.about-img {
+    position: absolute;
+    z-index: 3;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    transition: transform 0.25s ease;
+}
+
+.img-one {
+    width: 55%;
+    height: 340px;
+    left: 0;
+    top: 90px;
+    z-index: 5;
+    transform: rotate(-6deg);
+}
+
+.img-two {
+    width: 42%;
+    height: 320px;
+    right: 20px;
+    top: 20px;
+    z-index: 6;
+    transform: rotate(6deg);
+}
+
+.img-three {
+    width: 60%;
+    height: 280px;
+    right: 8%;
+    bottom: 10px;
+    z-index: 4;
+    transform: rotate(-2deg);
+}
+
 @media (max-width: 900px) {
-    body {
-        padding-top: 130px;
-    }
-
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav {
-        text-align: center;
-    }
-
-    nav a {
-        margin: 0 8px;
-        font-size: 14px;
-    }
-
-    .dropdown-menu {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .hero-text h1 {
-        font-size: 34px;
-    }
-
-    .service-boxes,
-    .project-boxes,
-    .battery-content {
-        flex-direction: column;
-    }
-
-    .box {
-        width: 100%;
-    }
-
-    .battery-text {
-        text-align: center;
-    }
-
-    .battery-text ul {
-        text-align: left;
-        display: inline-block;
-    }
-
-    .about-modern {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .about-collage {
-        min-height: 320px;
-        width: 100%;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .green-bg {
-        left: 50px;
-        top: 60px;
+        display: none;
     }
 
-    .about-stat {
-        flex-direction: column;
-        text-align: center;
+    .about-img {
+        position: static;
+        width: 100%;
+        height: auto;
     }
 }
+
+
