@@ -171,19 +171,15 @@ nav a:hover {
 }
 
 .box {
-    background-color: rgb(244, 247, 249);
+    background-color: #f4f7f9;
     width: 400px;
-    height: 250px;
-
-    padding: 15px;
-
+    min-height: 250px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: center;
-
+    justify-content: center;
+    align-items: flex-start;
     text-align: left;
-
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
@@ -231,6 +227,100 @@ nav a:hover {
     font-size: 18px;
 }
 
+/* Modern About */
+.about-modern {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.about-collage {
+    flex: 1;
+    position: relative;
+    min-height: 420px;
+}
+
+.green-bg {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background-color: #3aaa35;
+    left: 70px;
+    top: 80px;
+    z-index: 1;
+}
+
+.about-main-img {
+    position: relative;
+    z-index: 2;
+    width: 85%;
+    max-width: 600px;
+    border-radius: 4px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h2 {
+    font-size: 34px;
+    color: #0b1f33;
+    margin-bottom: 25px;
+}
+
+.about-content > p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.about-stat {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.circle-stat {
+    min-width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background: conic-gradient(#3aaa35 var(--percent), #eeeeee 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-stat span {
+    width: 82px;
+    height: 82px;
+    background: white;
+    border-radius: 50%;
+    color: #3aaa35;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-stat h3 {
+    font-size: 28px;
+    color: #0b1f33;
+    margin-bottom: 8px;
+}
+
+.about-stat p {
+    margin: 0;
+    color: #666;
+    font-size: 17px;
+}
+
 /* Contact */
 .contact-info {
     margin-top: 25px;
@@ -243,6 +333,13 @@ nav a:hover {
 
 .map-container {
     margin-top: 30px;
+}
+
+.map-container iframe {
+    width: 100%;
+    min-height: 400px;
+    border: 0;
+    border-radius: 12px;
 }
 
 /* Footer */
@@ -292,7 +389,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     body {
         padding-top: 130px;
     }
@@ -339,53 +436,23 @@ footer {
         display: inline-block;
     }
 
-/* Impact Section */
+    .about-modern {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.impact-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    padding: 80px 8%;
-    background-color: #f4f7f9;
-    flex-wrap: wrap;
-}
+    .about-collage {
+        min-height: 320px;
+        width: 100%;
+    }
 
-.impact-image {
-    flex: 1;
-    min-width: 350px;
-}
+    .green-bg {
+        left: 50px;
+        top: 60px;
+    }
 
-.impact-image img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.impact-content {
-    flex: 1;
-    min-width: 320px;
-}
-
-.impact-box {
-    margin-bottom: 40px;
-}
-
-.impact-box h2 {
-    font-size: 70px;
-    color: #f5b700;
-    line-height: 1;
-}
-
-.impact-box h3 {
-    color: #0b1f33;
-    margin: 10px 0;
-    font-size: 28px;
-}
-
-.impact-box p {
-    font-size: 18px;
-    color: #555;
-}
-
-
+    .about-stat {
+        flex-direction: column;
+        text-align: center;
+    }
 }
