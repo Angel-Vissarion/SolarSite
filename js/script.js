@@ -1,6 +1,6 @@
 function initScrollReveal() {
 const elements = document.querySelectorAll(
-    '.hero-text, .services h2, .service-boxes .box, .service-detail h2, .service-detail p, .battery-image, .battery-text li, .projects h2, .project-boxes .box, .about h2, .about p, .contact h2, .contact p'
+    '.impact-image, .impact-box,.hero-text, .services h2, .service-boxes .box, .service-detail h2, .service-detail p, .battery-image, .battery-text li, .projects h2, .project-boxes .box, .impact-image, .impact-box, .about h2, .about p, .contact h2, .contact p'
 );
 
     elements.forEach(el => {
