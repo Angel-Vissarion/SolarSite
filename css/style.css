@@ -429,7 +429,8 @@ footer {
     object-fit: cover;
     border-radius: 6px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-    transition: transform 0.25s ease;
+    animation: float 8s ease-in-out infinite alternate;
+    will-change: transform;
 }
 
 .img-one {
@@ -439,6 +440,7 @@ footer {
     top: 90px;
     z-index: 5;
     transform: rotate(-6deg);
+    animation-delay: 0s;
 }
 
 .img-two {
@@ -448,6 +450,7 @@ footer {
     top: 20px;
     z-index: 6;
     transform: rotate(6deg);
+    animation-delay: 0.8s;
 }
 
 .img-three {
@@ -457,6 +460,28 @@ footer {
     bottom: 10px;
     z-index: 4;
     transform: rotate(-2deg);
+    animation-delay: 1.2s;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0) rotate(var(--float-rotate, 0deg));
+    }
+    to {
+        transform: translateY(-12px) rotate(var(--float-rotate, 0deg));
+    }
+}
+
+.img-one {
+    --float-rotate: -6deg;
+}
+
+.img-two {
+    --float-rotate: 6deg;
+}
+
+.img-three {
+    --float-rotate: -2deg;
 }
 
 @media (max-width: 900px) {
